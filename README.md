@@ -34,6 +34,7 @@ k8sリソースとGitリポジトリを常に同期した状態に保つGitOps�
 * ArgoCDでGitOpsする（初期構築）
 * デモアプリへアクセス
 * ArgoCDでGitOpsする（バージョンアップ）
+* EKSクラスタ削除（後始末）
 
 ---
 # デモを行う
@@ -381,6 +382,28 @@ ArgoCDのバージョンアップ（argocd:v1.7.2 → v1.7.9）を実施する�
 しばらく待つとバージョンアップが完了します。
 ![demo](./assets/demo20.png)
 マニフェストと同期されたため緑色で「Sync」と表示されています。
+
+---
+
+## EKSクラスタ削除（後始末）
+最後にEKSクラスタを削除する。
+```
+eksctl delete cluster -f eks-cluster/cluster.yaml
+```
+実行結果（※正常に終了）
+```
+[ℹ]  eksctl version 0.34.0
+[ℹ]  using region us-west-2
+[ℹ]  deleting EKS cluster "argocd-demo"
+[ℹ]  deleted 0 Fargate profile(s)
+[✔]  kubeconfig has been updated
+[ℹ]  cleaning up AWS load balancers created by Kubernetes objects of Kind Service or Ingress
+[ℹ]  2 sequential tasks: { delete nodegroup "argocd-demo-ng", delete cluster control plane "argocd-demo" [async] }
+[ℹ]  will delete stack "eksctl-argocd-demo-nodegroup-argocd-demo-ng"
+[ℹ]  waiting for stack "eksctl-argocd-demo-nodegroup-argocd-demo-ng" to get deleted
+[ℹ]  will delete stack "eksctl-argocd-demo-cluster"
+[✔]  all cluster resources were deleted
+```
 
 ---
 
