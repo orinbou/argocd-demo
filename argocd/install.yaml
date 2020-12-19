@@ -2544,6 +2544,9 @@ metadata:
     app.kubernetes.io/part-of: argocd
   name: argocd-server
 spec:
+  type: LoadBalancer
+  # loadBalancerSourceRanges:
+  # - "xxx.xxx.xxx.xxx/32" # from XXX
   ports:
   - name: http
     port: 80
