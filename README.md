@@ -8,7 +8,7 @@ Version：
 ---
 
 ArgoCDは、
-Kubernetes用の宣言型の[GitOps](https://www.weave.works/technologies/gitops/)継続的デリバリーツールです。  
+Kubernetes用の宣言型の[GitOps](https://www.weave.works/technologies/gitops/)継続的REDME.mdデリバリーツールです。  
 
 ![demo](./assets/argocd.png)
 
@@ -18,8 +18,8 @@ https://argoproj.github.io/argo-cd/
 拡張性（Helmやkustomizeなどにも対応）などの利点があり広く利用されています。
 
 ![demo](./assets/argocd_architecture.png)
-※出典：
-[Argo CD - Declarative GitOps CD for Kubernetes : Overview - Architecture](https://argoproj.github.io/argo-cd/assets/argocd_architecture.png)
+
+※出典：[Argo CD - Declarative GitOps CD for Kubernetes : Overview - Architecture](https://argoproj.github.io/argo-cd/assets/argocd_architecture.png)
 
 このGitリポジトリのマニフェストをSSOT（Single Source of Truth：信頼できる唯一の情報源）
 として [AWS EKS](https://aws.amazon.com/jp/eks/) クラスタ上に構築したArgoCDを使用して
@@ -381,3 +381,7 @@ ArgoCDのバージョンアップ（argocd:v1.7.2 → v1.7.9）を実施する�
 しばらく待つとバージョンアップが完了します。
 ![demo](./assets/demo20.png)
 マニフェストと同期されたため緑色で「Sync」と表示されています。
+
+---
+
+以上で、GitOpsのデモは終了です。お疲れ様でした<(_ _)>
