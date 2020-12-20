@@ -404,6 +404,14 @@ eksctl delete cluster -f eks-cluster/cluster.yaml
 [ℹ]  will delete stack "eksctl-argocd-demo-cluster"
 [✔]  all cluster resources were deleted
 ```
+※追記：  
+AWSマネコンの CloudFormation > スタック で確認したところ削除に失敗（DELETE_FAILED）することがあるようです。  
+その場合は、AWSマネコンから関連リソース（VPC, Subnetなど）を手動で削除してからスタックを削除してください。  
+
+コマンド（eksctl）実行時にスタック削除結果を待機する場合は「--wait」オプションを使うと良さそうです。
+```
+eksctl delete cluster -f eks-cluster/cluster.yaml --wait
+```
 
 ---
 
