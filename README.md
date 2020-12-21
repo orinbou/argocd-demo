@@ -8,7 +8,7 @@ Version：
 ---
 
 ArgoCDは、
-Kubernetes用の宣言型の[GitOps](https://www.weave.works/technologies/gitops/)継続的REDME.mdデリバリーツールです。  
+Kubernetes用の宣言型の[GitOps](https://www.weave.works/technologies/gitops/)継続的デリバリーツールです。  
 
 ![demo](./assets/argocd.png)
 
